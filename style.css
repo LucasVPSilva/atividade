@@ -3,30 +3,52 @@
     margin: 0;
 }
 body {
-    width: 100vw;
-    height: 100vh;
     background-color:grey;
     overflow: hidden;
 }
 .container {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .imagemFundo {
     width: 100vw;
     height: 100vh;
     position: relative;
-    animation: fundoDark 10s ease 2s infinite;
+    animation: fundoDark 7s ease 1s forwards;
+}
+
+.logo {
+  position: absolute;
+  width: 400px;
+  animation: logoFade 3s ease-out 1s forwards;
+
 }
 
 @keyframes fundoDark {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes logoFade {
+  0% {
+    bottom: 20vh;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
   }
 
+  100% {
+    bottom: initial;
+    opacity: 1;
+  }
+}
 /* animation-fill-mode: forwards; */
