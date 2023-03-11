@@ -1,61 +1,160 @@
+
+
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 body {
-    background-color:grey;
-    overflow: hidden;
+  background-color:grey;
+  overflow: hidden;
 }
 .container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .imagemFundo {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    animation: fundoDark 7s ease 1s forwards;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  animation: fundoDark 7s ease 1s forwards;
 }
 
 .logo {
-  position: absolute;
-  width: 400px;
-  animation: logoFade 3s ease-out 1s forwards;
+position: absolute;
+width: 400px;
+opacity: 0;
+animation: logoFade 3s ease-out 1s forwards;
 
 }
 
+.feiticeiraScarlate{
+  position: relative;
+  width: 700px;
+  height: 800px;
+  right: 35%;
+  bottom: 10%;
+  transform: rotate(-10deg);
+  animation: scarlate 3s ease 1s infinite;
+  opacity: 0;
+
+}
+
+.doctorStrange {
+  position: absolute;
+  width: 400px;
+  bottom: 30%;
+  opacity: 0;
+  animation: drStrange 3s linear  1s forwards;
+}
+
+
+
 @keyframes fundoDark {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.1);
-  }
+0% {
+  transform: scale(1);
+}
+100% {
+  transform: scale(1.1);
+}
 }
 
 @keyframes logoFade {
+0% {
+  bottom: 0%;
+  opacity: 0;
+}
+
+50% {
+
+  opacity: 0.5;
+}
+
+75% {
+
+  opacity: 0.7;
+}
+
+100% {
+  width: 500px;
+  bottom: 10%;
+  opacity: 1;
+}
+}
+
+
+@keyframes drStrange {
   0% {
-    bottom: 0;
     opacity: 0;
   }
 
-  50% {
-    bottom: 30%;
-    opacity: 0.5;
+  25% {
+    width: 500px;
+    opacity: 0.3;
   }
 
-  75% {
-    bottom: 39%;
+  50%{
+
     opacity: 0.7;
   }
 
-  100% {
-    bottom: initial;
+  75%{
+
+    opacity: 0.7;
+  
+  }
+  
+  100%{
+    bottom: 30%;
+    width: 700px;
     opacity: 1;
   }
 }
+
+@keyframes scarlate {
+  0%{
+    opacity: 0;
+  }
+
+  10% {
+   opacity: 0;
+  
+  }
+
+  20%{
+    opacity: 0.25;
+  }
+
+  30%{
+    opacity: 0.5;
+  }
+  40%{
+    opacity: 0.75;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  60%{
+    opacity: 0.25;
+  }
+  70%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 0.25;
+  }
+  90%{
+    opacity: 0.55;
+  }
+  
+  100%{
+    opacity: 0.5;
+  }
+
+
+}
 /* animation-fill-mode: forwards; */
+
