@@ -1,5 +1,3 @@
-
-
 * {
   padding: 0;
   margin: 0;
@@ -16,11 +14,52 @@ body {
   justify-content: center;
 }
 
+.btn1{
+  width: 100px;
+  height: 60px;
+  margin-left: 80%;
+  margin-top: 40%;
+  animation: animacao 2s ease-in-out 4s infinite;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.012);
+  color: white;
+  border: 0px;
+  cursor: pointer;
+  text-shadow: 0 0 1px rgb(255, 255, 255);
+  font-size: 0.8em;
+ 
+}
+
+
+.btn2{
+  width: 100px;
+  height: 60px;
+  padding: 2px;
+  position: absolute;
+  margin-left: 60%;
+  margin-top: 40%;
+  animation: animacao 2s ease-in-out 4s infinite;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: 0px;
+  cursor: pointer;
+  text-decoration: none;
+  text-shadow: 0 0 1px rgb(255, 255, 255);
+
+}
+.linkTrailer {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+  text-shadow: 0 0 1px rgb(255, 255, 255);
+}
+
 .imagemFundo {
   width: 100vw;
   height: 100vh;
   position: absolute;
-  animation: fundoDark 7s ease 1s forwards;
+  animation: fundoDark 7s ease-in-out 1s infinite;
 }
 
 .logo {
@@ -32,15 +71,15 @@ animation: logoFade 3s ease-out 1s forwards;
 }
 
 .feiticeiraScarlate{
-  position: relative;
-  width: 700px;
-  height: 800px;
-  right: 35%;
-  bottom: 10%;
-  transform: rotate(-10deg);
-  animation: scarlate 3s ease 1s infinite;
+  position: absolute;
+  width: 500px;
+  height: 600px;
+  left: 68%;
+  bottom: 18%;
+  transform: rotate(-5deg);
+  animation: scarlate 3s linear 3s forwards;
+  z-index: 3;
   opacity: 0;
-
 }
 
 .doctorStrange {
@@ -51,14 +90,27 @@ animation: logoFade 3s ease-out 1s forwards;
   animation: drStrange 3s linear  1s forwards;
 }
 
+.americaChaves{
+  position: absolute;
+  height: 650px;
+  width: 360px;
+  left: 5.4%;
+  bottom: 5%;
+  z-index: 0;
+  animation: scarlate 3s linear 3s forwards;
+  opacity: 0;
+}
 
 
 @keyframes fundoDark {
 0% {
   transform: scale(1);
 }
-100% {
+50% {
   transform: scale(1.1);
+}
+100%{
+  transform: scale(1);
 }
 }
 
@@ -80,7 +132,7 @@ animation: logoFade 3s ease-out 1s forwards;
 
 100% {
   width: 500px;
-  bottom: 10%;
+  bottom: 5%;
   opacity: 1;
 }
 }
@@ -115,46 +167,24 @@ animation: logoFade 3s ease-out 1s forwards;
 }
 
 @keyframes scarlate {
-  0%{
-    opacity: 0;
-  }
-
-  10% {
-   opacity: 0;
+  0% { opacity: 0; }
   
-  }
-
-  20%{
-    opacity: 0.25;
-  }
-
-  30%{
-    opacity: 0.5;
-  }
-  40%{
-    opacity: 0.75;
-  }
-  50%{
-    opacity: 0.5;
-  }
-  60%{
-    opacity: 0.25;
-  }
-  70%{
-    opacity: 0;
-  }
-  80%{
-    opacity: 0.25;
-  }
-  90%{
-    opacity: 0.55;
-  }
-  
-  100%{
-    opacity: 0.5;
-  }
-
-
+  100% { opacity: 1; }
 }
-/* animation-fill-mode: forwards; */
 
+@keyframes animacao {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+}
